@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon-2.png">
+    <title>添加行程</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/customer/index.css">
+    <link rel="stylesheet" href="css/customer/create_trip.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        #search-createtrip {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            left: 350px;
+        }
+        
+        .add-create {
+            width: 100px;
+            height: 40px;
+            position: relative;
+            bottom: 3px;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+
+    <!-- 导航栏 -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#"><img src="img/main-1.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">消息</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                地点
+              </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">西安</a>
+                        <a class="dropdown-item" href="#">北京</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">其它城市</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="search-1">
+                <input class="form-control mr-sm-2" type="search" placeholder="搜索旅行地/酒店/旅游/景点门票/交通" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查询</button>
+            </form>
+            <nav class="navbar navbar-light bg-light">
+                <span class="navbar-text">
+                  <a href="login.html">欢迎您</a>
+                </span>
+            </nav>
+        </div>
+    </nav>
+
+
+
+
+    <div id="search-createtrip">
+        <input type="text" id="a1" placeholder="请输入出发地">
+        <input type="text" id="a2" placeholder="请输入目的地">
+        <input type="text" id="a3" placeholder="出行方式">
+        <input type="text" id="a4" placeholder="住宿">
+
+        <input class="btn btn-primary add-create" type="button" value="添加" id="btn_add">
+
+    </div>
+
+
+    <div class="container">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">出发地</th>
+                    <th scope="col">目的地</th>
+                    <th scope="col">出行方式</th>
+                    <th scope="col">住宿</th>
+                    <th scope="col">操作</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+
+    <script>
+        document.getElementById("btn_add").onclick = function() {
+            //2.获取文本框的内容
+            var a1 = document.getElementById("a1").value;
+            var a2 = document.getElementById("a2").value;
+            var a3 = document.getElementById("a3").value;
+            var a4 = document.getElementById("a4").value;
+            //获取table
+            var table = document.getElementsByTagName("table")[0];
+
+            //追加一行
+            table.innerHTML += "<tr>\n" +
+                "        <td scope='row'>" + a1 + "</td>\n" +
+                "        <td>" + a2 + "</td>\n" +
+                "        <td>" + a3 + "</td>\n" +
+                "        <td>" + a4 + "</td>\n" +
+                "        <td><a href=\"javascript:void(0);\" onclick=\"delTr(this);\" >删除</a></td>\n" +
+                "    </tr>";
+        }
+
+
+        //删除方法
+        function delTr(obj) {
+            var table = obj.parentNode.parentNode.parentNode;
+            var tr = obj.parentNode.parentNode;
+
+            table.removeChild(tr);
+        }
+    </script>
+
+
+
+
+
+    <footer class="container-fluid" style="background-color: #888;margin-top: 70px;">
+        <div class="row">
+            <table style="margin-top: 20px;">
+                <tr>
+                    <td>
+                        关于官网
+                    </td>
+                    <td>
+                        业务合作
+                    </td>
+                    <td>
+                        加入我们
+                    </td>
+                    <td>
+                        安全中心
+                    </td>
+                    <td>
+                        旅游公益
+                    </td>
+                    <td style="border-right:none ;">
+                        About Us
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <ul id="ul-1">
+                <li> <img src="img/phone.png"> 15771831xxx&nbsp;</li>
+                <li><img src="img/email.png"> 246941xxxx@qq.com&nbsp;</li>
+                <li><img src="img/dizhi.png"> 西安市长安区西长安街618号东区计算机学院</li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul id="ul-2">
+                <li>违法和不良信息举报电话021-22500846</li>
+                <li>&nbsp;</li>
+                <li>全国旅游投诉热线12301</li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

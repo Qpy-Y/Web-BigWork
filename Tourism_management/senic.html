@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon-2.png">
+    <title>景点查询</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/customer/index.css">
+    <link rel="stylesheet" href="css/customer/senic.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+    <!-- 导航栏 -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#"><img src="img/main-1.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">消息</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                地点
+              </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">西安</a>
+                        <a class="dropdown-item" href="#">北京</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">其它城市</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="search-1">
+                <input class="form-control mr-sm-2" type="search" placeholder="搜索旅行地/酒店/旅游/景点门票/交通" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查询</button>
+            </form>
+            <nav class="navbar navbar-light bg-light">
+                <span class="navbar-text">
+                  <a href="login.html">欢迎您</a>
+                </span>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalCenter" style="margin: 10px 500px;">
+            搜索景点
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">搜索出游主题景点</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        您需要登录个人账号即可进行搜索
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-1">
+            <img src="img/icon-6.png" alt="">&nbsp;出游主题
+        </div>
+
+
+        <div class="card-group" style="margin-top: 20px;">
+            <div class="card">
+                <img class="card-img-top" src="img/senic-1.jpg" style="height: 245.39px;" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title t1">国家牡丹园</h5>
+                    <p class="card-text t2">百花珍兽园·丹江大观苑·安康香溪洞</p>
+                    <p><button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-7.png" alt=""> 收藏
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-8.png" alt=""> 评论</button>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/senic-2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title t1">秦岭野生动物园</h5>
+                    <p class="card-text t2">佛坪大熊猫保护区·南湖公园</p>
+                    <p><button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-7.png" alt=""> 收藏
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-8.png" alt=""> 评论</button>
+                    </p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/senic-3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title t1">洽川风景区</h5>
+                    <p class="card-text t2">黑河森林公园·二龙山水库</p>
+                    <p><button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-7.png" alt=""> 收藏
+                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-outline-primary w-25">
+                        <img src="img/icon-8.png" alt=""> 评论</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="container-fluid " style="background-color: #888;margin-top: 70px; ">
+        <div class="row ">
+            <table style="margin-top: 20px; ">
+                <tr>
+                    <td>
+                        关于官网
+                    </td>
+                    <td>
+                        业务合作
+                    </td>
+                    <td>
+                        加入我们
+                    </td>
+                    <td>
+                        安全中心
+                    </td>
+                    <td>
+                        旅游公益
+                    </td>
+                    <td style="border-right:none ; ">
+                        About Us
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row " style="margin-top: 20px; ">
+            <ul id="ul-1 ">
+                <li> <img src="img/phone.png "> 15771831xxx&nbsp;</li>
+                <li><img src="img/email.png "> 246941xxxx@qq.com&nbsp;</li>
+                <li><img src="img/dizhi.png "> 西安市长安区西长安街618号东区计算机学院</li>
+            </ul>
+        </div>
+        <div class="row ">
+            <ul id="ul-2 ">
+                <li>违法和不良信息举报电话021-22500846</li>
+                <li>&nbsp;</li>
+                <li>全国旅游投诉热线12301</li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.h-name {
+    font-family: "黑体";
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.h-button {
+    background-color: DodgerBlue;
+    border-radius: 5px;
+    border: 1px solid DodgerBlue;
+    color: white;
+    font-weight: 500;
+}
+
+.h-font-1 {
+    color: DodgerBlue;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.h-font-2 {
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.h-money {
+    text-decoration: none;
+    color: DodgerBlue;
+    font-weight: 500;
+    font-size: 21px;
+}
